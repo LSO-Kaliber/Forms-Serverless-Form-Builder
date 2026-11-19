@@ -1,0 +1,44 @@
+{
+  "name": "forms-kaliber",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:frontend": "vite",
+    "build:frontend": "vite build",
+    "build": "vite build",
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "vue-tsc --noEmit && tsc --project tsconfig.worker.json --noEmit",
+    "db:migrate:local": "wrangler d1 execute forms_kaliber_db --local --file=./migrations/0001_init.sql",
+    "db:migrate:remote": "wrangler d1 execute forms_kaliber_db --remote --file=./migrations/0001_init.sql",
+    "db:migrate:apply:local": "wrangler d1 migrations apply forms_kaliber_db --local",
+    "db:migrate:apply:remote": "wrangler d1 migrations apply forms_kaliber_db --remote"
+  },
+  "dependencies": {
+    "browser-image-compression": "^2.0.2",
+    "hono": "^4.6.14",
+    "pinia": "^2.3.0",
+    "sortablejs": "^1.15.6",
+    "vuedraggable": "^4.1.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "@types/node": "^22.10.2",
+    "@types/sortablejs": "^1.15.8",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8",
+    "vue-tsc": "^2.2.0",
+    "wrangler": "^3.99.0"
+  }
+}

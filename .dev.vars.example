@@ -1,0 +1,4 @@
+# Runtime secrets for Cloudflare Worker
+SITE_PASSWORD="kaliber_secret_password_123"
+TURNSTILE_SECRET=""
+ENVIRONMENT="development"
