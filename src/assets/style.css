@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #101316;
+    color: #ffffff;
+    font-family: 'PT Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #101316;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3138;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C83338;
+}
+
+/* Kaliber card gradient utility */
+.kaliber-card-gradient {
+  background: linear-gradient(135deg, rgba(200, 51, 56, 0.25) 0%, rgba(41, 28, 51, 0.6) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.kaliber-card-solid {
+  background-color: #1d2226;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.kaliber-card-solid:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
